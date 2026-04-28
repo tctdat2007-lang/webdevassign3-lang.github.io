@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="trigger">Hover here</p>
+
+<img id="target"
+     src="https://picsum.photos/200"
+     width="200">
+
+<script>
+    const trigger = document.getElementById("trigger");
+    const img = document.getElementById("target");
+
+    trigger.addEventListener("mouseover", () => {
+        img.src = "https://picsum.photos/200?random=2";
+    });
+
+    trigger.addEventListener("mouseout", () => {
+        img.src = "https://picsum.photos/200";
+    });
+</script>
+
+</body>
+</html>
