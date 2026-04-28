@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="target"></ul>
+
+<script>
+    const target = document.getElementById("target");
+
+    ["First item", "Second item", "Third item"].forEach(text => {
+        const li = document.createElement("li");
+        li.textContent = text;
+        target.appendChild(li);
+    });
+</script>
+
+</body>
+</html>
