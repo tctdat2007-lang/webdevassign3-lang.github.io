@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="num1" type="number">
+<input id="num2" type="number">
+
+<select id="operation">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+
+<button>Calculate</button>
+
+<p id="result"></p>
+
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+        const a = Number(document.getElementById("num1").value);
+        const b = Number(document.getElementById("num2").value);
+        const op = document.getElementById("operation").value;
+
+        let result;
+
+        if (op === "+") result = a + b;
+        if (op === "-") result = a - b;
+        if (op === "*") result = a * b;
+        if (op === "/") result = a / b;
+
+        document.getElementById("result").textContent = result;
+    });
+</script>
+
+</body>
+</html>
