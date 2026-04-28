@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    <input name="firstName" placeholder="First name">
+    <input name="lastName" placeholder="Last name">
+    <button type="submit">Submit</button>
+</form>
+
+<p id="target"></p>
+
+<script>
+    document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const first = document.querySelector("[name='firstName']").value;
+        const last = document.querySelector("[name='lastName']").value;
+
+        document.getElementById("target").textContent =
+            `Your name is ${first} ${last}`;
+    });
+</script>
+
+</body>
+</html>
